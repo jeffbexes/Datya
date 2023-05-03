@@ -8,28 +8,18 @@ import numpy as np
 f=open('data.txt',"r")
 lines=f.readlines()
 crimes=[]
-years=[]
 
 #reading.moment
 for h in lines:
     crimes.append(h.split(' ')[3])
-for k in lines:
-    years.append(k.split(' ')[0])
-
 #axis setup
-k=years
-default_k_ticks = range(len(k))
-plt.xticks(default_k_ticks, k)
-
-h=crimes
-default_h_ticks=range(len(k))
-plt.yticks(default_h_ticks,h)
-
+plt.xlim(2000,2019)
+plt.ylim(0,1500000)
+plt.axline((2000,1425486.00),(2019,1203808.00))
 #labeling.exe
-'''plt.xlabel("years")
-plt.ylabel("number of crimes, in millions, in the USA")'''
+plt.xlabel("years")
+plt.ylabel("number of crimes, in millions, in the USA")
 
 #moment of coolness
-plt.plot(crimes)
 plt.show()
 f.close()
