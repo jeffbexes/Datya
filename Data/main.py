@@ -12,13 +12,14 @@ crimes=[]
 #reading.moment
 for h in lines:
     crimes.append(h.split(' ')[3])
-#axis setup
-plt.xlim(2000,2019)
-plt.ylim(0,1500000)
-plt.axline((2000,1425486.00),(2019,1203808.00))
+#work=Force*Distance
+xlim=plt.xlim(2000,2019)
+ylim=plt.ylim(0,600)
+plt.axline((2000,506.50),(2019,366.70))
+plt.axline((2000,151.94),(2019,278.84))
 #labeling.exe
 plt.xlabel("years")
-plt.ylabel("number of crimes, in millions, in the USA")
+plt.ylabel("Crimes Rates in the USA")
 
 #moment of coolness
 plt.show()
