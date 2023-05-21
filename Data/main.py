@@ -15,11 +15,13 @@ for h in lines:
 #work=Force*Distance
 xlim=plt.xlim(2000,2019)
 ylim=plt.ylim(0,600)
-plt.axline((2000,506.50),(2019,366.70))
-plt.axline((2000,151.94),(2019,278.84))
+plt.axline((2000,506.50),(2019,366.70), color='blue',label="national average")
+plt.axline((2000,151.94),(2019,278.84), color= 'orange', label="new yorks average")
 #labeling.exe
 plt.xlabel("years")
 plt.ylabel("Crimes Rates in the USA")
+plt.legend(loc="upper right")
+
 
 #moment of coolness
 plt.show()
